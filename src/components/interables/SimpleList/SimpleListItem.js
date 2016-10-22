@@ -9,7 +9,7 @@ export const SimpleListItem = ({ data, renderedItem }) => {
 }
 
 SimpleListItem.defaultProps = {
-  data: PropTypes.object,
+  data: {},
   renderedItem: null
 }
 

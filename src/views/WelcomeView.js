@@ -34,10 +34,6 @@ const SESSION_MOCK = [
   }
 ]
 
-const mockedItem = ({ data }) => (
-    <bold> {data.feature}: </bold> { data.description }
-)
-
 export const WelcomeView = () => (
   <div>
     <div className={_.header}>

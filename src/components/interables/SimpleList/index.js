@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react'
+import uid from 'uid';
 
 import SimpleListWrapper from './SimpleListWrapper';
 import SimpleListItem from './SimpleListItem';
 
 export const SimpleList = ({ className, items, renderedItem }) => {
-  const listItems = items.map(i => <SimpleListItem renderedItem={renderedItem} data={i}>)
+  const listItems = items.map(i => (<SimpleListItem key={uid()} renderedItem={renderedItem} data={i} />))
 
   return (
     <SimpleListWrapper className={className}>

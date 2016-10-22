@@ -5,8 +5,8 @@ import classNames from 'classnames'
 
 export const InfoCard = ({ children, title, hide }) => {
   const finalClass = classNames({
-      [_.['info-card']] : true,
-      [_.['info-card-slim']] : hide
+      [_['info-card']] : true,
+      [_['info-card-slim']] : hide
   })
 
   return (
@@ -14,17 +14,18 @@ export const InfoCard = ({ children, title, hide }) => {
       <h2>{title}</h2>
       <div>
         {children}
-      <div>
+      </div>
     </div>
   )
 }
+
 InfoCard.defaultProps = {
   title: "",
   chidren: null,
   hide: true
 }
 
-InfoCard.defaultProps = {
+InfoCard.propTypes = {
   title: PropTypes.string.isRequired,
   chidren: PropTypes.element,
   hide: PropTypes.bool
