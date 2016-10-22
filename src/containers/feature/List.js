@@ -6,10 +6,10 @@ import SimpleList from 'components/interables/SimpleList';
 
 import { Container } from 'redux';
 
-const MockedItem = ({ data }) => (
-    <span>
-      <bold> { data.feature }: </bold> { data.description }
-    </span>
+const MockedItem = (data) => (
+  <span>
+    <bold> { data.feature }: </bold> { data.description }
+  </span>
 )
 
 export const FeatureListContainer = ({sessions}) => {
