@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react'
 export const SimpleListItem = ({ data, renderedItem }) => {
   return (
     <li>
-      <renderedItem data={data} />
+      { renderedItem(data) }
     </li>
   )
 }
