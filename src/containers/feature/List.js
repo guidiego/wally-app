@@ -4,7 +4,7 @@ import uid from 'uid';
 import InfoCard from 'components/cards/InfoCard';
 import SimpleList from 'components/interables/SimpleList';
 
-import { Container } from 'redux';
+import { connect } from 'react-redux';
 
 const MockedItem = ({ data }) => (
     <span>
@@ -12,7 +12,15 @@ const MockedItem = ({ data }) => (
     </span>
 )
 
-export const FeatureListContainer = ({sessions}) => {
+const mapStateToProps = (state) => {
+  sessions: state.get('tree').get('items')
+}
+
+const mapDispatchToProps = (dispatch) => {
+  openTab: (indexToOpen) => dispatch({ type: 'OPEN', indexToOpen })
+}
+
+export const FeatureListContainer = ({sessions, openTab}) => {
   const infoCards = sessions.map(i => (
       <InfoCard key={uid()} title={i.title}>
         <SimpleList renderedItem={MockedItem} items={i.list} />
@@ -26,4 +34,4 @@ export const FeatureListContainer = ({sessions}) => {
   )
 }
 
-export default FeatureListContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(FeatureListContainer);
