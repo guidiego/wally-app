@@ -20,7 +20,7 @@ const MockedItem = (data) => (
   </span>
 )
 
-export const FeatureListContainer = ({sessions openTab}) => {
+export const FeatureListContainer = ({sessions, openTab}) => {
   const infoCards = sessions.map(i => (
       <InfoCard key={uid()} title={i.title}>
         <SimpleList renderedItem={MockedItem} items={i.list} />
