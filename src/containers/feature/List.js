@@ -7,11 +7,16 @@ import SimpleList from 'components/interables/SimpleList';
 import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
-  sessions: state.get('tree').get('items')
+  return {
+    sessions: state.getIn(['tree','items']),
+    opened: state.getIn(['tree','opened'])
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
-  openTab: (indexToOpen) => dispatch({ type: 'OPEN', indexToOpen })
+  return { 
+    openTab: (indexToOpen) => dispatch({ type: 'OPEN', indexToOpen })
+  }
 }
 
 const MockedItem = (data) => (
@@ -20,10 +25,11 @@ const MockedItem = (data) => (
   </span>
 )
 
-export const FeatureListContainer = ({sessions, openTab}) => {
-  const infoCards = sessions.map(i => (
-      <InfoCard key={uid()} title={i.title}>
-        <SimpleList renderedItem={MockedItem} items={i.list} />
+export const FeatureListContainer = ({sessions, opened, openTab}) => {
+  const infoCards = sessions.map((item, index) => (
+      <InfoCard key={uid()} title={item.title} hide={!(opened == index)} 
+        onClick={openTab} index={index}>
+        <SimpleList renderedItem={MockedItem} items={item.list} />
       </InfoCard>
   ))
 

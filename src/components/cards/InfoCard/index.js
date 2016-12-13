@@ -3,16 +3,20 @@ import React, { PropTypes } from 'react'
 import _ from './InfoCard.sass'
 import classNames from 'classnames'
 
-export const InfoCard = ({ children, title, hide }) => {
+export const InfoCard = ({ index, children, title, hide, onClick }) => {
+
   const finalClass = classNames({
-      [_['info-card']] : true,
-      [_['info-card-slim']] : hide
-  })
+      [_['info-card']] : true
+  });
+
+  const activeClass = classNames({
+    [_['active']] : !hide
+  });
 
   return (
-    <div className={finalClass}>
+    <div className={finalClass} onClick={() => onClick(index)}>
       <h2>{title}</h2>
-      <div>
+      <div className={activeClass}>
         {children}
       </div>
     </div>
@@ -21,13 +25,13 @@ export const InfoCard = ({ children, title, hide }) => {
 
 InfoCard.defaultProps = {
   title: "",
-  chidren: null,
+  children: null,
   hide: true
 }
 
 InfoCard.propTypes = {
   title: PropTypes.string.isRequired,
-  chidren: PropTypes.element,
+  children: PropTypes.element,
   hide: PropTypes.bool
 }
 

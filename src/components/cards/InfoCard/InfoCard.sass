@@ -1,10 +1,32 @@
-.info-card
-  width: 100%
-  background: #FFF
-  box-shadow: 0 0 10px rgba(50, 50, 50, 0.5)
-  max-width: auto
-  transition: 0.5 ease
+@keyframes collapsein
+    from 
+    	height: 0
+    to 
+    	height: 100px
 
-.info-card-slim div
-  max-width: 0px
-  transition: 0.5 ease
+@keyframes collapseout
+    from 
+    	height: 100px
+    to 
+    	height: 0
+
+.info-card
+	width: 100%
+	background: #FFF
+
+.info-card 
+	h2 
+		margin-top: 0
+		cursor: pointer
+
+	ul
+		margin-bottom: 0
+	
+	div
+		height: 0
+		overflow: hidden
+		animation: collapseout .5s
+
+		&.active 
+			height: 100px
+			animation: collapsein .5s
