@@ -2,9 +2,9 @@ import React from 'react';
 
 import FeatureContainer from 'containers/feature/List'
 
-import _ from './WelcomeView.sass';
+import _ from './HomeView.sass';
 
-export const WelcomeView = () => (
+export const HomeView = () => (
   <div>
     <div className={_.header}>
       <img src="http://i.imgur.com/iqyCvDP.png" className={_.logo}/>
@@ -15,4 +15,4 @@ export const WelcomeView = () => (
   </div>
 );
 
-export default WelcomeView;
+export default HomeView;

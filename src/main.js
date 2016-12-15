@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Routes from 'router/routes';
+import AppContainer from 'containers/AppContainer';
+import createRoutes from 'router';
+import rootStore from 'redux/rootStore';
 
 import "./style.sass";
 
+const routes = createRoutes(rootStore)
+const MOUNT_NODE = document.getElementById("morphine-app")
+
 ReactDOM.render(
-  <Routes />,
-  document.getElementById('morphine-app')
-);
+    <AppContainer store={rootStore} routes={routes} />,
+    MOUNT_NODE
+)
