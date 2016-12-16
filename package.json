@@ -7,9 +7,13 @@
     "url": "git+https://github.com/guidiego/morphine.git"
   },
   "scripts": {
-    "start": "next ./src",
+    "dev": "next ./src",
+    "build": "next build ./src",
+    "start": "next start ./src",
     "test": "jest --watch",
     "test:cov": "jest --coverage",
+    "docker_build": "docker build -t morphine $PWD",
+    "docker_run": "docker run -it -p 3000:3000 morphine",
     "lint": "eslint ./src",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
