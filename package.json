@@ -9,15 +9,28 @@
   "scripts": {
     "start": "next ./src",
     "test": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test:cov": "jest --coverage",
     "lint": "eslint ./src",
-    "coveralls": "cat ./coverage/report-lcov/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "jest": {
     "testDirectoryName": "test",
     "coverageDirectory": "coverage",
-    "collectCoverageFrom": ["src/**/*.js"],
-    "coverageReporters": ["html", "lcov"],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "unmockedModulePathPatterns": [
+      "node_modules/react/",
+      "node_modules/enzyme/"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "coverageReporters": [
+      "html",
+      "lcov"
+    ],
     "coverageThreshold": {
       "global": {
         "statements": 95,
@@ -48,15 +61,23 @@
   },
   "homepage": "https://github.com/guidiego/morphine#readme",
   "dependencies": {
-    "next": "^1.2.3"
+    "next": "^1.2.3",
+    "react": "^15"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-airbnb": "^2.1.1",
+    "enzyme": "^2.6.0",
     "eslint": "^3.12.2",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-import-resolver-node": "^0.3.0",
     "eslint-plugin-babel": "^4.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.8.0"
+    "eslint-plugin-react": "^6.8.0",
+    "jest": "^18.0.0",
+    "react-addons-test-utils": "^15.4.1"
   }
 }

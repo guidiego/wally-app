@@ -4,4 +4,4 @@ export default () => (
   <div>
     Morphine Coroi
   </div>
-)
+);
