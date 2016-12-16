@@ -69,6 +69,7 @@
     "babel-jest": "^18.0.0",
     "babel-polyfill": "^6.20.0",
     "babel-preset-airbnb": "^2.1.1",
+    "coveralls": "^2.11.15",
     "enzyme": "^2.6.0",
     "eslint": "^3.12.2",
     "eslint-config-airbnb": "^13.0.0",
