@@ -15,7 +15,7 @@ Morphine was created **one** of the pillars of that new archicheture, a server t
 We are using [Yarn](https://yarnpkg.com/), click on link and install it before anything!
 
 | yarn ...  | description  |
-|    :-:    |           |
+|    :-:    |     :--      |
 | dev       |  start a simple server with hot-reload for development |
 | build     |  build your application to deploy on prod   |
 | start     |  start a server with builded files in `yarn build` |
