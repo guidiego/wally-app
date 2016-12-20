@@ -1,0 +1,43 @@
+{
+    "testPathDirs": [
+        "tests"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/node_modules/jest-enzyme/lib/index.js",
+    "unmockedModulePathPatterns": [
+        "node_modules/react",
+        "node_modules/enzyme",
+        "node_modules/jasmine-enzyme"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "coverageDirectory": "coverage",
+    "coveragePathIgnorePatterns": [
+        "/node_modules/",
+        "/src/.next/",
+        "/Users/NaoyukiKanezawa/github.com/zeit/next.js/lib"
+    ],
+    "collectCoverageFrom": [
+      "src/pages/**/*.js",
+      "src/containers/**/*.js"
+    ],
+    "coverageReporters": [
+      "html",
+      "lcov"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 95,
+        "branches": 95,
+        "functions": 95,
+        "lines": 95
+      },
+      "each": {
+        "statements": 95,
+        "branches": 95,
+        "functions": 95,
+        "lines": 95
+      }
+    }
+}

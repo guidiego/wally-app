@@ -1,0 +1,8 @@
+test
+.eslint*
+.travis*
+.git*
+node_modules
+coverage
+LICENSE
+*.md
