@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, Users } from 'containers';
+import { Page, Users } from '../containers';
 
 const users = () => (
   <Page title='Fetching List Example'>
