@@ -1,10 +1,7 @@
 import React from 'react';
-import { Page } from '../containers';
 
 const index = () => (
-  <Page>
-    <span> Index </span>
-  </Page>
+    <span> Home </span>
 );
 
 export default index;

@@ -1,19 +1,17 @@
 {
-  "name": "morphine",
+  "name": "wally",
   "version": "1.0.0",
-  "description": "A simple boilerplate for React WebApps",
+  "description": "A client to wally",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guidiego/morphine.git"
+    "url": "git@github.com:guidiego/wally-app.git"
   },
   "scripts": {
-    "dev": "next ./src",
+    "dev": "node server.js",
     "build": "next build ./src",
     "start": "next start ./src",
     "test": "jest --config jest.config.json --watch",
     "test:cov": "jest --config jest.config.json --coverage",
-    "docker_build": "docker build -t morphine $PWD",
-    "docker_run": "docker run -it -p 3000:3000 morphine",
     "lint": "eslint ./src",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
@@ -28,9 +26,9 @@
   "author": "Guilherme Diego <guidiego.expgames@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guidiego/morphine/issues"
+    "url": "https://github.com/guidiego/wally-app/issues"
   },
-  "homepage": "https://github.com/guidiego/morphine#readme",
+  "homepage": "https://github.com/guidiego/wally-app#readme",
   "dependencies": {
     "koa": "^1.2.4",
     "koa-router": "^7.1.0",
