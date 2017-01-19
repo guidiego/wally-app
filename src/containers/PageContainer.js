@@ -6,8 +6,12 @@ import { Provider } from 'react-redux';
 import { Grid, PageHeader, Navbar, NavItem, Nav } from 'react-bootstrap';
 import { store } from 'isolate-redux-env';
 
+import DevTools from "./DevTools";
+
+console.log(process.env.NODE_ENV)
+
 export const PageContainer = ({ children, title }) => (
-  <Provider store={store} >
+  <Provider store={store([DevTools.instrument()])} >
     <div>
         <Head>
             <title> Morphine - {title}</title>
@@ -16,7 +20,7 @@ export const PageContainer = ({ children, title }) => (
         <Navbar inverse collapseOnSelect>
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href="/">Morphine</a>
+                    <a href="/">Morph assds d asine</a>
                 </Navbar.Brand>
             </Navbar.Header>
 
@@ -28,6 +32,7 @@ export const PageContainer = ({ children, title }) => (
         <Grid>
             { children }
         </Grid>
+        { process.env.NODE_ENV != 'production' && <DevTools /> }
     </div>
   </Provider>
 );

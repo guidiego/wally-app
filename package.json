@@ -32,7 +32,9 @@
   },
   "homepage": "https://github.com/guidiego/morphine#readme",
   "dependencies": {
-    "next": "^1.2.3",
+    "koa": "^1.2.4",
+    "koa-router": "^7.1.0",
+    "next": "2.0.0-beta.17",
     "react": "^15",
     "react-bootstrap": "^0.30.7",
     "react-redux": "^5.0.1"
@@ -51,9 +53,12 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.8.0",
-    "isolate-redux-env": "^1.0.0",
+    "isolate-redux-env": "^1.0.2",
     "jest": "^18.0.0",
     "jest-enzyme": "^2.0.0",
-    "react-addons-test-utils": "^15.4.1"
+    "react-addons-test-utils": "^15.4.1",
+    "redux-devtools": "^3.3.2",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.2.0"
   }
 }

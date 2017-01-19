@@ -3,7 +3,7 @@
 
 # A long time ago...
 
-With the time I noticed that when we try to scale applications with React + [any flux implementation here] we got lost in the many folders and layers that we create, and the principal, we lost the sense of reusability of react.  
+With the time I noticed that when we try to scale applications with React + [any flux implementation here] we got lost in the many folders and layers that we create, and the principal, we lost the sense of reusability of react.
 We are trying a new architecture to simplify the way we see this reusability and give less responsibility for the things.
 
 # What is morphine
@@ -25,6 +25,10 @@ We are using [Yarn](https://yarnpkg.com/), click on link and install it before a
 | docker_build  | build a docker image of your project  |
 | docker_run | up the container builded on `docker_build`  |
 | coveralls  | send coverage data for coveralls  |
+
+# Redux Dev Tools
+`ctrl + q` Change position
+`ctrl + h` Hide
 
 # Lint Problems
 AirBnb lint has a little problem with a version of `eslint-plugin-jsx-a11y` you can fix that with only 2 commands:
