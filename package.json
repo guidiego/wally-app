@@ -54,6 +54,7 @@
     "isolate-redux-env": "^1.0.2",
     "jest": "^18.0.0",
     "jest-enzyme": "^2.0.0",
+    "re-bulma": "^0.2.3",
     "react-addons-test-utils": "^15.4.1",
     "redux-devtools": "^3.3.2",
     "redux-devtools-dock-monitor": "^1.1.1",
